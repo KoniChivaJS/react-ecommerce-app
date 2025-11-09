@@ -6,6 +6,7 @@ import { Products } from "./pages/products";
 import { Container } from "./container";
 import Favorites from "./pages/favorite";
 import Cart from "./pages/cart";
+import NotFound from "./pages/notFound";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/products" element={<Products className="py-10" />} />
           <Route path="/favorite" element={<Favorites />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Container>
     </main>
