@@ -1,4 +1,5 @@
 import React from "react";
+import { Product } from "../../@types";
 
 interface Props {
   className?: string;
@@ -6,14 +7,15 @@ interface Props {
   handlePrevious: () => void;
   offset: number;
   limit: number;
+  products: Product[];
 }
-
 export const Pagination: React.FC<Props> = ({
   className,
   handleNext,
   handlePrevious,
   offset,
   limit,
+  products,
 }) => {
   return (
     <div className="flex justify-center items-center gap-4 mt-8">
@@ -27,7 +29,8 @@ export const Pagination: React.FC<Props> = ({
       <span className="text-sm text-gray-600">Page {offset / limit + 1}</span>
       <button
         onClick={handleNext}
-        className="px-4 py-2 bg-blue-500 text-white hover:bg-blue-600 rounded"
+        disabled={!products || products.length < limit}
+        className="px-4 py-2 bg-blue-500 text-white hover:bg-blue-600 rounded disabled:opacity-50"
       >
         Next
       </button>

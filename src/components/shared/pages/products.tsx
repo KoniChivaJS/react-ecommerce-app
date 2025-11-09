@@ -34,7 +34,7 @@ export const Products: React.FC<Props> = ({ className }) => {
   } = useProductsFilters();
 
   if (isLoading) return <Loader className="mt-10" />;
-  if (error) {
+  if (error || !products) {
     toast.error("Failed to load products");
     return <Error text="Failed to load products" />;
   }
@@ -66,6 +66,7 @@ export const Products: React.FC<Props> = ({ className }) => {
         handlePrevious={handlePrevious}
         offset={offset}
         limit={limit}
+        products={products}
       />
     </div>
   );
