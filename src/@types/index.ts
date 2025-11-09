@@ -18,3 +18,12 @@ export interface Product {
   creationAt: string;
   updatedAt: string;
 }
+
+export interface ProductQuery {
+  offset?: number;
+  limit?: number;
+  title?: string;
+  price_min?: number;
+  price_max?: number;
+  categoryId?: number;
+}

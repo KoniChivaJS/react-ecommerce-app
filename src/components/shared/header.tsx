@@ -23,24 +23,7 @@ export const Header: React.FC<Props> = ({ className }) => {
       label: "Products",
       link: "/products",
     },
-    {
-      label: "Categories",
-      link: "/categories",
-    },
   ];
-
-  //   if (isAuthenticated) {
-  //     navigateItems.push({
-  //       label: "Logout",
-  //       link: "/login",
-  //       onClick: handleLogout,
-  //       icon: <LogOut size={16} />,
-  //     });
-  //   } else {
-  //     navigateItems.push({
-  //       label: "Login",
-  //       link: "/login",
-  //     });
 
   return (
     <div className={`${className} w-full shadow-sm h-[50px] flex items-center`}>
