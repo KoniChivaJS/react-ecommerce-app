@@ -23,6 +23,14 @@ export const Header: React.FC<Props> = ({ className }) => {
       label: "Products",
       link: "/products",
     },
+    {
+      label: "Favorite",
+      link: "/favorite",
+    },
+    {
+      label: "Cart",
+      link: "/cart",
+    },
   ];
 
   return (
