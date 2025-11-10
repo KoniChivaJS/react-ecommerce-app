@@ -16,7 +16,7 @@ const Favorites = () => {
       {favorites.length === 0 ? (
         <p>No favorites yet :c </p>
       ) : (
-        <div className="grid grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {favorites.map((item) => (
             <div
               key={item.id}

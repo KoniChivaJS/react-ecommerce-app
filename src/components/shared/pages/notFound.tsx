@@ -1,6 +1,6 @@
 // src/pages/NotFound.tsx
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 const NotFound: React.FC = () => {
   return (

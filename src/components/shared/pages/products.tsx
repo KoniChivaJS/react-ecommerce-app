@@ -60,6 +60,7 @@ export const Products: React.FC<Props> = ({ className }) => {
           <ProductItem key={product.id} product={product} />
         ))}
       </div>
+
       <Pagination
         className="mt-8"
         handleNext={handleNext}

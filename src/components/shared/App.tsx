@@ -11,24 +11,19 @@ import Footer from "./footer";
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <main className="flex flex-col min-h-screen">
       <Header />
-
-      {/* Контент займає весь доступний простір */}
-      <main className="flex-grow">
-        <Container>
-          <Routes>
-            <Route path="/" element={<Home className="py-10" />} />
-            <Route path="/products" element={<Products className="py-10" />} />
-            <Route path="/favorite" element={<Favorites />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Container>
-      </main>
-
+      <Container className="flex-grow w-full">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/favorite" element={<Favorites />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Container>
       <Footer />
-    </div>
+    </main>
   );
 }
 
